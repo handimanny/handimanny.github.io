@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Mbliduk</title> 
+    <meta http-equiv="refresh"
+        content="5; url = https://blogh4nd1.blogspot.com/" />
+        
+        <style>
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{display:none;}
+        </style>
+
+</head> 
+  
+<body>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h1 style="text-align:center;color:green;"> 
+    h4nd1
+    </h1>
+    
+    <center>
+    <iframe src="https://cdn.dribbble.com/users/934248/screenshots/3231844/media/2f3e6d6db539298f88a052e4929f5223.gif" width="800" height="600" frameBorder="0" class="giphy-embed" allowFullScreen>
+    </iframe>
+    </center>
+    
+</body> 
+  
+</html> 
