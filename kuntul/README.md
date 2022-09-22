@@ -1,4 +1,4 @@
-Clumsy Bird
+Manuk Kuntul Is Clumsy Bird
 ===========
 
 A MelonJS made "Flappy Bird" clone.
