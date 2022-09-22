@@ -34,6 +34,6 @@ Lihat Cuplikan Video [Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
 
 ## Lanjut
 
-[Beberapa code di github saya](https://github.com/handimanny/)
+[Beberapa code di github saya](https://github.com/handimanny?tab=repositories)
 
 Cukup sekian dan terimakasih, [lainya dari saya](https://handimanny.github.io/)
