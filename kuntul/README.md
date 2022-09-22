@@ -5,14 +5,14 @@ Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
 ![](https://play-lh.googleusercontent.com/LRKrmyhrkVDTLdng_IeLDRqPAFoRhXCM4GaOTvkOGKeMW3lyS2wpDxfbUiRcbT4ftk4=w2560-h1440-rw)
 
-Mainkan online di [Play](https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id)
+Mainkan online klik [Play](https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id)
 
 ![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)
 
-## Running Locally
+## Jalankan Dan Modifikasi
 
-- Install [Node](http://nodejs.org/download/) and [Grunt](http://gruntjs.com/)
-- Install the dependencies
+- Download [File](https://handimanny.github.io/kuntul/)
+- Bisa langsung di extrak dan di jalankan di browser
 
 ```
 npm install
@@ -30,8 +30,8 @@ Open your browser at `http://localhost:8001/`
 
 See [CUSTOMIZING](https://github.com/ellisonleao/clumsy-bird/blob/master/CUSTOMIZING.md)
 
-## Some nice games made with this project
+## Lanjut
 
-[Checkout here](https://github.com/ellisonleao/clumsy-bird/wiki/Games-using-clumsy-bird-code)
+[Beberapa code di github saya](https://handimanny.github.io/)
 
-Some thoughts about this code you can find on [my blog post](https://handimanny.github.io/)
+Cukup sekian dan terimakasih, [lainya dari saya](https://handimanny.github.io/)
