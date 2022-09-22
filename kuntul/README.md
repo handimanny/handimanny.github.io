@@ -1,4 +1,4 @@
-#Manuk Kuntul Berdasarkan Clumsy Bird
+Manuk Kuntul Berdasarkan Clumsy Bird
 ===========
 
 Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
@@ -7,7 +7,7 @@ Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
 Mainkan online di https://handimanny.github.io/kuntul/
 
-[![Diperbarui](https://handimanny.github.io/kuntul/data/img/gameover.png)](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/)
+[![Diperbarui](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/)
 
 ## Running Locally
 
