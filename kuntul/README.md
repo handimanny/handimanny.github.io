@@ -5,9 +5,9 @@ A MelonJS made "Flappy Bird" clone.
 
 ![](http://i.imgur.com/Slbvt65.png)
 
-Play online at https://handimanny.github.io/kuntul/
+Mainkan online di https://handimanny.github.io/kuntul/
 
-[![Deploy](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/README.md)](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/)
+[![Diperbarui](https://handimanny.github.io/kuntul/data/img/gameover.png)](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/)
 
 ## Running Locally
 
