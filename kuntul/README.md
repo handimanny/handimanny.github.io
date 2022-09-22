@@ -28,7 +28,8 @@ Open your browser at `http://localhost:8001/`
 
 ## Semoga lancar Modifikasi kalian
 
-![](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/data/img/logo.png) Lihat Cuplikan Video [Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
+![](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/data/img/logo.png)
+Lihat Cuplikan Video [Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
 
 ## Lanjut
 
