@@ -28,7 +28,7 @@ Open your browser at `http://localhost:8001/`
 
 ## Semoga lancar Modifikasi kalian
 
-Lihat Cuplikan Video![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)[Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
+![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png) Lihat Cuplikan Video [Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
 
 ## Lanjut
 
