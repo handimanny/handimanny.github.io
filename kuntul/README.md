@@ -9,7 +9,7 @@ Mainkan game klik [Play](https://play.google.com/store/apps/details?id=com.h4nd1
 
 ![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)
 
-## Jalankan Dan Modifikasi
+## Modifikasi
 
 - Download [File](https://handimanny.github.io/kuntul/)
 - Bisa langsung di extrak dan di jalankan di browser
@@ -26,7 +26,7 @@ grunt connect
 
 Open your browser at `http://localhost:8001/`
 
-## Semoga lancar Modifikasi kalian
+## Semoga lancar Modifikasinya
 
 ![](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/data/img/logo.png)
 Lihat Cuplikan Video [Disini](https://www.youtube.com/watch?v=uOB6m8rmt-c)
