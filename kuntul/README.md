@@ -5,7 +5,7 @@ Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
 ![](https://play-lh.googleusercontent.com/LRKrmyhrkVDTLdng_IeLDRqPAFoRhXCM4GaOTvkOGKeMW3lyS2wpDxfbUiRcbT4ftk4=w2560-h1440-rw)
 
-Mainkan online klik [Play](https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id)
+Mainkan game klik [Play](https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id)
 
 ![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)
 
@@ -26,9 +26,9 @@ grunt connect
 
 Open your browser at `http://localhost:8001/`
 
-## Making your customization
+## Semoga lancar Modifikasi kalian
 
-See [CUSTOMIZING](https://github.com/ellisonleao/clumsy-bird/blob/master/CUSTOMIZING.md)
+Lihat [Video](https://www.youtube.com/watch?v=uOB6m8rmt-c)
 
 ## Lanjut
 
