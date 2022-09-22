@@ -1,1 +1,1 @@
-# ini adalah portopolio saya.
+# ini adalah web. https://handimanny.github.io/
