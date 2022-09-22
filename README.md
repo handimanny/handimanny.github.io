@@ -1,1 +1,1 @@
-# ini adalah web. https://handimanny.github.io/
+# kunjungi web. https://handimanny.github.io/
