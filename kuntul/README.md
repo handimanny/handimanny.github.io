@@ -1,7 +1,7 @@
-Manuk Kuntul Is Clumsy Bird
+#Manuk Kuntul Berdasarkan Clumsy Bird
 ===========
 
-A MelonJS made "Flappy Bird" clone.
+Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
 ![](http://i.imgur.com/Slbvt65.png)
 
