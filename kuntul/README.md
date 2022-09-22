@@ -7,7 +7,7 @@ A MelonJS made "Flappy Bird" clone.
 
 Play online at https://handimanny.github.io/kuntul/
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ellisonleao/clumsy-bird/tree/gh-pages)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://github.com/handimanny/handimanny.github.io/blob/main/kuntul/)
 
 ## Running Locally
 
