@@ -7,7 +7,7 @@ Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
 Mainkan online di https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id
 
-[(https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)]
+![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)
 
 ## Running Locally
 
