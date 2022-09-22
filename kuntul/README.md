@@ -9,8 +9,6 @@ Mainkan game klik [Disini](https://play.google.com/store/apps/details?id=com.h4n
 
 ![](https://handimanny.github.io/kuntul/data/img/touch-icon-iphone-retina.png)
 
-Apa kata mereka
-
 ## Modifikasi
 
 - Download [File](https://handimanny.github.io/kuntul/)
