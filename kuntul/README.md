@@ -3,7 +3,7 @@ Manuk Kuntul Berdasarkan Clumsy Bird
 
 Tiruan dari "Flappy Bird" yang dikembangkan MelonJS.
 
-![](http://i.imgur.com/Slbvt65.png)
+![](https://play-lh.googleusercontent.com/LRKrmyhrkVDTLdng_IeLDRqPAFoRhXCM4GaOTvkOGKeMW3lyS2wpDxfbUiRcbT4ftk4=w2560-h1440-rw)
 
 Mainkan online di https://play.google.com/store/apps/details?id=com.h4nd1.manuk.kuntul.game.id
 
