@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="/action_page.php">
+
+    <p><label>Instal Laravel</label></p>
+    <textarea rows="2" cols="250" disabled>
+      composer create-project laravel/laravel zero
+    </textarea>
+  
+    <p><label>Instal Laravel/UI</label></p>
+    <textarea rows="6" cols="250" disabled>
+      ------------------------------------------
+      composer require laravel/ui
+      -----------------------------------------
+      php artisan ui bootstrap --auth
+      -----------------------------------------
+    </textarea>
+  
+    <p><label>Add Laravel/UI CDN</label></p>
+    <textarea rows="8" cols="250" disabled>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </textarea>
+  
+    <p><label>Edit DB At .env</label></p>
+    <textarea rows="7" cols="250" disabled>
+      DB_CONNECTION=mysql
+      DB_HOST=127.0.0.1 //edit this if necessary
+      DB_PORT=3306
+      DB_DATABASE=laravel //edit this if necessary
+      DB_USERNAME=root //edit this if necessary
+      DB_PASSWORD= //edit this if necessary
+    </textarea>
+    
+    <p><label>Add Migrations User:DB</label></p>
+    <textarea rows="2" cols="250" disabled>
+      $table->string('role')->default('user');
+    </textarea>
+
+    <p><label>Add manual DB:Seeder</label></p>
+    <textarea rows="7" cols="250" disabled>
+      User::create([
+          'name'=> 'admin',
+          'email'=> 'admin@mail.com',
+          'password'=> Hash::make('admin@mail.com'),
+          'role'=> 'admin',
+      ]);
+    </textarea>
+  
+    <p><label>Laravel migrate:fresh and seed</label></p>
+    <textarea rows="2" cols="250" disabled>
+      php artisan migrate:fresh --seed
+    </textarea>
+  
+    <p><label>web Route</label></p>
+    <textarea rows="5" cols="250" disabled>
+      Route::get('/', [HomeController::class, 'index']);
+  
+      Route::resource('one', OneController::class);
+      Route::get('deleteone/{id}', [OneController::class,'destroy'])->name('deleteone');
+    </textarea>
+  
+    <p><label>Controller, Model & Migration</label></p>
+    <textarea rows="7" cols="250" disabled>
+      php artisan make:model One -mcr
+  
+      --Or Manual Add--
+  
+      php artisan make:controller OneController -r
+      php artisan make:model One -m
+    </textarea>
+  
+    <p><label>Add To Table Two & One</label></p>
+    <textarea rows="5" cols="250" disabled>
+      $table->string('name_one');
+      -----------------------------------------
+      $table->string('name_two');
+      $table->foreignId('one_id')->constrained('ones');
+    </textarea>
+    
+    <p><label>Add To Model One</label></p>
+    <textarea rows="8" cols="250" disabled>
+      protected $table = 'ones'; //for relasi
+      protected $guarded = ['id'];
+  
+      public function two() //for relasi
+      {
+          return $this->hasMany(Two::class); //for relasi
+      }
+    </textarea>
+  
+    <p><label>Add To Model Two</label></p>
+    <textarea rows="8" cols="250" disabled>
+      protected $table = 'twos'; //for relasi
+      protected $guarded = ['id'];
+  
+      public function one() //for relasi
+      {
+          return $this->belongsTo(One::class); //for relasi
+      }
+    </textarea>
+  
+    <p><label>cRudController</label></p>
+    <textarea rows="3" cols="250" disabled>
+      $data = One::all();
+      return view('/one/one', compact('data'));
+    </textarea>
+  
+    <p><label>cRudView</label></p>
+    <textarea rows="26" cols="250" disabled>
+                      <a href="one/create" class="btn btn-outline-primary" >Add Kategori</a>
+                      <table class="table">
+                          <thead>
+                              <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">One</th>
+                              <th scope="col">Action</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              @foreach ($data as $file)
+                              <tr>
+                              <th scope="row">{{$loop->iteration}}</th>
+                              <td>{{$file['name_one']}}</td>
+                              <td>
+                              <a href="{{url('one/'.$file->id.'/edit')}}" class="btn btn-outline-success" >Edit</a>
+                              |
+                              <a href="{{url('deleteone/'.$file->id)}}" class="btn btn-outline-danger" >Delete</a>
+                              </td>
+                              </tr>
+                              @endforeach
+                          </tbody>
+                      </table>
+
+                      <td><img src="{{ asset('storage/'.$file->image) }}" alt="" width="100px"></td> //add view image
+    </textarea>
+
+    <p><label>Add To View Relasi</label></p>
+    <textarea rows="2" cols="250" disabled>
+      <td>{{$file->one->nama_one}}</td>
+    </textarea>
+  
+    <p><label>CrudController</label></p>
+    <textarea rows="35" cols="250" disabled>
+      $data = One::all();
+      return view('/one/create', compact('data'));
+  
+      -----------------------------------------ForOption
+  
+      $two = Two::all();
+      $data = One::all();
+      return view('/one/create', compact('data','two'));
+  
+      ------------------------------------------
+  
+      $validator = $request->validate([
+      'name_one' => 'required|string'
+      ]);
+      One::create($validator);
+      return redirect('/one');
+      
+      -----------------------------------------ForImageController
+      FILESYSTEM_DISK //from config/filesystems.php
+      FILESYSTEM_DISK=public //to .env
+
+      php artisan storage:link
+
+      $table->string('image'); //add db:migration
+      // $table->string('image')->nullable();
+
+      One::create([
+      'nama_one'=> 'user',
+      'image'=> 'user', //at seeder add new
+      'zero_id'=> '1',
+      ]);
+
+      'image' => 'required|image', //add controller
+      $validator['image'] = $request->file('image')->store('img'); //add controller
+    </textarea>
+  
+    <p><label>CrudView</label></p>
+    <textarea rows="47" cols="250" disabled>
+      <form action="{{url('one')}}" method="POST" >
+          @csrf
+      <div class="mb-3">
+          <label for="" class="form-label @error('nama_one') is-invalid @enderror">Add Name</label>
+          <input type="text" class="form-control" name="name_one" id="name_one" placeholder="Input Name" >
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+      -----------------------------------------ForOptionCreate
+      <div class="mb-3">
+        <label for="two_id" class="form-label">Add Two</label>
+        <select class="form-control" id="two_id" name="two_id">
+            @foreach ($two as $file)
+            <option value="{{$file->id}}" @selected(old('two_id')==$file->id)>{{$file->nama_two}}</option>
+            @endforeach
+        </select>
+      </div>
+      -----------------------------------------ForError
+
+      <label for="" class="form-label @error('nama_one') is-invalid @enderror">Add Nama</label>
+      
+      @error('nama_one')
+      <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+      </span>
+      @enderror
+
+      -----------------------------------------ForSucces
+      return redirect('/one')->with('success','Data berhasil masuk'); //add controller
+
+      <div class="card-body">
+        @if(session()->has('success'))
+        <div class="alert alert-success mt-2" role="alert">
+            {{session('success')}}
+        </div>
+        @elseif(session()->has('error'))
+        <div class="alert alert-warning mt-2" role="alert">
+            {{session('error')}}
+        </div>
+        @elseif($errors->any())
+        <div class="alert alert-danger mt-2" role="alert">
+            Masukkan Data dengan benar
+        </div>
+        @endif
+        -----------------------------------------EndSucces
+    </textarea>
+
+    <p><label>CrudViewImage</label></p>
+    <textarea rows="30" cols="250" disabled>
+      <form action="{{url('one')}}" method="POST" enctype="multipart/form-data"> //enctype="multipart/form-data"
+
+      <div class="mb-3">
+          <label for="image" class="form-label">Tambah Image</label>
+          <input class="form-control" type="file" id="image" name="image">
+      </div>
+      -----------------------------------------ImageJSpreview
+      <div class="mb-3">
+        <label for="image" class="form-label">Tambah Image</label>
+        <img class="img-preview img-fluid mb-3 col-sm-5" >
+        <input class="form-control" type="file" id="image" name="image" onchange="previewImage()" >
+      </div>
+
+      <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+    
+            imgPreview.style.display = 'block';
+    
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+    
+            oFReader.onload = function(oFREvent){
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+    </script>
+    </textarea>
+
+    <p><label>crUdController</label></p>
+    <textarea rows="15" cols="250" disabled>
+      $data = One::findOrFail($id);
+      return view('one/edit', compact('data'));
+      -----------------------------------------ForOption
+      $data = One::findOrFail($id);
+      $two = Two::all();
+      return view('one/edit', compact('data','two'));
+      -----------------------------------------ForOption
+  
+      $data = One::findOrFail($id);
+      $validator = $request->validate([
+          'name_one' => 'required|string'
+      ]);
+      $data->update($validator);
+      return redirect('/one');
+    </textarea>
+    
+    <p><label>crUdView</label></p>
+    <textarea rows="21" cols="250" disabled>
+      <form action="{{url('one/'.$data->id)}}" method="POST" >
+          @csrf
+          @method('PUT')
+      <div class="mb-3">
+          <label for="nama_one" class="form-label">Edit Name</label>
+          <input type="text" class="form-control" id="name_one" name="name_one" placeholder="Input Name" value="{{$data->name_one}}" >
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+
+      -----------------------------------------ForOption
+      <div class="mb-3">
+        <label for="zero_id" class="form-label">Add Zero</label>
+        <select class="form-control" id="zero_id" name="zero_id">
+            @foreach ($zero as $file)
+            <option value="{{$file->id}}" @selected ( $data->zero_id==$file->id )>{{$file->nama_zero}}</option>
+            @endforeach
+        </select>
+    </div>
+    -----------------------------------------ForOption
+    </textarea>
+
+    <p><label>crUdViewImage rimember //enctype="multipart/form-data</label></p>
+    <textarea rows="50" cols="250" disabled>
+
+      $data = One::findOrFail($id);
+      if ($request->file('image')) {
+          $file = $request->file('image')->store('img');
+          if ($request->image){
+              Storage::delete($data->image); //delete file old
+          }
+          $data->update([
+              'nama_one' => $request->nama_one,
+              'image' => $file,
+              'zero_id' => $request->zero_id
+          ]);
+      } else {
+          $data->update([
+              'nama_one' => $request->nama_one,
+              'image' => $data->image,
+              'zero_id' => $request->zero_id
+          ]);
+      }
+      return redirect('/one');
+
+      <form action="{{url('one')}}" method="POST" enctype="multipart/form-data"> //enctype="multipart/form-data
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Tambah Image</label>
+          @if($data->image)
+          <img src="{{ asset('storage/'.$data->image) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+          @else
+          <img class="img-preview img-fluid mb-3 col-sm-5" >
+          @endif
+          <input class="form-control" type="file" id="image" name="image" onchange="previewImage()" >
+      </div>
+
+    <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+    
+            imgPreview.style.display = 'block';
+    
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+    
+            oFReader.onload = function(oFREvent){
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+    </script>
+    </textarea>
+
+    <p><label>cruDController</label></p>
+    <textarea rows="13" cols="250" disabled>
+      $data = One::findOrFail($id);
+      $data->delete();
+      return redirect('/one');
+
+      -----------------------------------------ForImageController
+
+      $data = One::findOrFail($id);
+      if($data->image){
+          Storage::delete($data->image);
+      }
+      $data->delete();
+      return redirect('/one');
+    </textarea>
+  
+    <br>
+    <br>
+    <br>
+  
+  </form>
+
+</body>
+</html>
