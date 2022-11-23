@@ -35,7 +35,7 @@
 <form action="/action_page.php" class=" form-control container mt-2">
 
   <p><label>If Guest Hiden Menu</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="12" cols="170" disabled>
     @guest
     @else
     <a class="navbar-brand" href="{{ url('/two') }}">
@@ -50,7 +50,7 @@
   </textarea>
 
   <p><label>If User Login Hiden Menu</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="11" cols="170" disabled>
     @if (Auth::user()->role == 'admin')
     <a class="dropdown-item" href="{{ url('/five') }}">
         Five
@@ -63,15 +63,15 @@
     @endif
   </textarea>
 
-  <p><label>Laravel migrate:fresh and seed</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <p><label>Laravel model, controller & migrate</label></p>
+  <textarea rows="5" cols="170" disabled>
     php artisan make:model Five -mcr
     ------------------------------------------OrAddManual
     php artisan make:model Five -m
     php artisan make:controller FiveController -r
   </textarea>
 
-  <p><label>Laravel migrate:fresh and seed</label></p>
+  <p><label>Laravel Route</label></p>
   <textarea rows="5" cols="170" disabled>
   use App\Http\Controllers\FiveController;
       
@@ -80,13 +80,13 @@
   </textarea>
 
   <p><label>Add cRudController</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="3" cols="170" disabled>
     $data = User::all();
     return view('/five/five', compact('data'));
   </textarea>
 
   <p><label>Add cRudView</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="27" cols="170" disabled>
     <table class="table">
       <thead>
           <tr>
@@ -116,13 +116,13 @@
   </textarea>
 
   <p><label>Add crUdController</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="3" cols="170" disabled>
     $data = User::findOrFail($id);
     return view('five/edit', compact('data'));
   </textarea>
 
   <p><label>Add crUdController</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="9" cols="170" disabled>
     $data = User::findOrFail($id);
     $data->update([
     'name' => $request->name,
@@ -134,7 +134,7 @@
   </textarea>
   
   <p><label>Add crUdView</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="28" cols="170" disabled>
     <form action="{{url('five/'.$data->id)}}" method="POST" >
       @csrf
       @method('PUT')
@@ -165,14 +165,14 @@
   </textarea>
 
   <p><label>Add cruDController</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="4" cols="170" disabled>
     $data = User::findOrFail($id);
     $data->delete();
     return redirect('/five')->with('error', 'success delete five');
   </textarea>
 
   <p><label>Other Trik</label></p>
-  <textarea rows="2" cols="170" disabled>
+  <textarea rows="6" cols="170" disabled>
     @if (Auth::user()->role == 'admin')
     //it is dashboard for admin only
     @else
@@ -180,11 +180,28 @@
     @endif
   </textarea>
 
+  <p><label>Footer</label></p>
+  <textarea rows="14" cols="170" disabled>
+<div style="min-height: 65vh;"></div>
+
+    <footer class="navbar shadow-lg p-3 mt-4">
+      <div class="container">
+          <span class="text-white" >
+            .
+          </span>
+      
+          <form>
+            //teks
+          </form>
+      </div>
+    </footer>
+  </textarea>
+
 </form>
 
 <!-- <div style="min-height: 65vh;"></div> -->
 
-<nav class="navbar shadow-lg p-3 mt-4">
+<!-- <nav class="navbar shadow-lg p-3 mt-4">
     <div class="container">
         <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
 
@@ -195,7 +212,23 @@
           <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
         </form>
     </div>
-</nav> 
+</nav> -->
+
+<footer class="navbar shadow-lg p-3 mt-4">
+<div class="container">
+    <!-- <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a> -->
+    <span class="text-white" >
+      .
+    </span>
+
+    <form>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+    </form>
+</div>
+</footer>
 
 </body>
 </html>
