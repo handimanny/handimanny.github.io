@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+</head>
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/14/14187.png" type="image/x-icon"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+
+  <nav class="navbar shadow p-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span class="text-primary" >Win</span><span class="text-black-50" >ner</span></a>
+
+        <form>
+          <a href='index.html' class="btn btn-outline-success fw-bold">Dashboard</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4" >
+    <a href="index.html" class="btn btn-outline-primary">Laravel Basic</a>
+    <a href="one.html" class="btn btn-outline-primary">CRUD One</a>
+    <a href="two.html" class="btn btn-outline-primary">CRUD Two</a>
+    <a href="three.html" class="btn btn-outline-primary">CRUD Three</a>
+    <a href="four.html" class="btn btn-outline-primary">CRUD Four</a>
+    <a href="five.html" class="btn btn-outline-primary">CRUD Five</a>
+  </div>
+
+<form action="/action_page.php" class=" form-control container mt-2">
+
+  <p><label>Laravel model, controller & migrate</label></p>
+  <textarea rows="5" cols="170" disabled>
+    php artisan make:model Five -mcr
+    ------------------------------------------OrAddManual
+    php artisan make:model Five -m
+    php artisan make:controller FiveController -r
+  </textarea>
+
+  <p><label>Laravel Route</label></p>
+  <textarea rows="5" cols="170" disabled>
+  use App\Http\Controllers\FiveController;
+      
+  Route::resource('five', FiveController::class);
+  Route::get('deletefive/{id}', [FiveController::class,'destroy'])->name('deletefive');
+  </textarea>
+
+  <p><label>Add cRudController</label></p>
+  <textarea rows="3" cols="170" disabled>
+    $data = User::all();
+    return view('/five/five', compact('data'));
+  </textarea>
+
+  <p><label>Add cRudView</label></p>
+  <textarea rows="27" cols="170" disabled>
+    <table class="table">
+      <thead>
+          <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nama</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+          <th scope="col">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach ($data as $file)
+          <tr>
+          <th scope="row">{{$loop->iteration}}</th>
+          <td>{{$file['name']}}</td>
+          <td>{{$file['email']}}</td>
+          <td>{{$file['role']}}</td>
+          <td>
+          <a href="{{url('five/'.$file->id.'/edit')}}" class="btn btn-outline-success" >Edit</a>
+          |
+          <a href="{{url('deletefive/'.$file->id)}}" class="btn btn-outline-danger" >Delete</a>
+          </td>
+          </tr>
+          @endforeach
+      </tbody>
+  </table>
+  </textarea>
+
+  <p><label>Add crUdController</label></p>
+  <textarea rows="3" cols="170" disabled>
+    $data = User::findOrFail($id);
+    return view('five/edit', compact('data'));
+  </textarea>
+
+  <p><label>Add crUdController</label></p>
+  <textarea rows="9" cols="170" disabled>
+    $data = User::findOrFail($id);
+    $data->update([
+    'name' => $request->name,
+    'email' => $request->email,
+    'password' => Hash::make($request->password),
+    'role' => $request->role,
+    ]);
+    return redirect('/five')->with('success', 'success update five');
+  </textarea>
+
+  <p><label>Add Models User</label></p>
+  <textarea rows="9" cols="170" disabled>
+    protected $fillable = [
+    'name',
+    'email',
+    'password',
+    'role',
+  ];
+  </textarea>
+  
+  <p><label>Add crUdView</label></p>
+  <textarea rows="28" cols="170" disabled>
+    <form action="{{url('five/'.$data->id)}}" method="POST" >
+      @csrf
+      @method('PUT')
+  <div class="mb-3">
+      <label for="name" class="form-label">Edit Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Input Name" value="{{$data->name}}" >
+  </div>
+  <div class="mb-3">
+      <label for="email" class="form-label">Edit Email</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Input Email" value="{{$data->email}}" >
+  </div>
+  <div class="mb-3">
+      <label for="password" class="form-label">Edit password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Input password" value="{{$data->password}}" >
+  </div>
+  @if (Auth::user()->role == 'admin')
+  <div class="mb-3">
+      <label class="form-label">Edit Role</label>
+      <select class="form-select" aria-label="Default select example" name="role">
+          <option selected>Open this select menu</option>
+          <option value="admin" @selected($data->role=='admin')>Admin</option>
+          <option value="editor" @selected($data->role=='editor')>Editor</option>
+      </select>
+  </div>
+  @endif
+  <button type="submit" class="btn btn-outline-primary">Submit</button>
+  </form>
+  </textarea>
+
+  <p><label>Add cruDController</label></p>
+  <textarea rows="4" cols="170" disabled>
+    $data = User::findOrFail($id);
+    $data->delete();
+    return redirect('/five')->with('error', 'success delete five');
+  </textarea>
+
+</form>
+
+<!-- <div style="min-height: 65vh;"></div> -->
+
+<!-- <nav class="navbar shadow-lg p-3 mt-4">
+    <div class="container">
+        <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
+
+        <form>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+        </form>
+    </div>
+</nav> -->
+
+<footer class="navbar shadow-lg p-3 mt-4">
+<div class="container">
+    <!-- <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a> -->
+    <span class="text-white" >
+      .
+    </span>
+
+    <form>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
+      <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+    </form>
+</div>
+</footer>
+
+</body>
+</html>
