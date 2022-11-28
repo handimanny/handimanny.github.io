@@ -55,7 +55,7 @@
           'name' => $name, //from name to name
           'height' => $height, //from height to height
           'weight' => $weight, //from weight to weight
-          'bmi' => $bmi, //from function bmi($weight, $height)
+          'bmi' => round($bmi, 1), //from function bmi($weight, $height)
           'status' => $status,
           'hobi' => $hobi[rand(0, count($hobi) -1)],
           'umur' => $class->hitungUmur(),
