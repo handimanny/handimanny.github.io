@@ -62,8 +62,13 @@
 <form action="/action_page.php" class=" form-control container mt-2" >
 
 <p><label>Instal Laravel In CMD</label></p>
-<textarea rows="2" cols="170" disabled>
+<textarea rows="7" cols="170" disabled>
 composer create-project laravel/laravel zero
+    
+<li class="nav-item">
+  <a class="nav-link {{ request()->is('basic*')? 'active fw-semibold':'' }}" href="{{ url('basic') }}">Basic</a>
+</li>
+
 </textarea>
 
 <p><label>Laravel/UI "cd zero" and "code ."</label></p>
