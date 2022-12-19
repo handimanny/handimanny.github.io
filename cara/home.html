@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+
+  <nav class="navbar shadow p-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span class="text-primary" >Win</span><span class="text-black-50" >ner</span></a>
+
+        <form>
+          <a href='index.html' class="btn btn-outline-success fw-bold">Dashboard</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="container mt-4" >
+    <a href="index.html" class="btn btn-outline-primary">Laravel Basic</a>
+    <a href="one.html" class="btn btn-outline-primary">CRUD One</a>
+    <a href="two.html" class="btn btn-outline-primary">CRUD Two</a>
+    <a href="three.html" class="btn btn-outline-primary">CRUD Three</a>
+    <a href="four.html" class="btn btn-outline-primary">CRUD Four</a>
+    <a href="five.html" class="btn btn-outline-primary">CRUD Five</a>
+    <a href="six.html" class="btn btn-outline-primary">OOP PHP</a>
+  </div> -->
+
+<form action="/action_page.php" class=" form-control container mt-2">
+  
+<p><label>Add HomeController</label></p>
+<textarea rows="7" cols="170" disabled>
+  $data = Four::where('status', 'yes')->get();
+  return view('home', compact('data'));
+  ------------------------------------------VersiZero
+  $one = One::all();
+  $data = Post::where('status', 'see')->get();
+  return view('home', compact('data','one'));
+</textarea>
+
+<p><label>Add HomeView</label></p>
+<textarea rows="143" cols="170" disabled>
+  ------------------------------------------VersiZero
+  <div class="row">
+    @foreach ($data as $file)
+    <!-- <div class="col-lg-4 col-md-2 col-sm-2 mt-2"> -->
+    <div class="col-lg-4 mt-2">
+        <div class="card">
+            <div style="max-height:100px; overflow:hidden;" >
+                <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_960_720.jpg" class="card-img-top" alt="">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Post : {{ $file->post }}</h5>
+                <h5 class="card-text">One : {{$file->one->nama_one}}</h5>
+                <a class="nav-link btn btn-outline-dark" href="{{url('new/'.$file->id.'/see')}}">see</a>
+                <span>Pembaca : {{ DB::table('see')->where('post_id', $file->id)->count() }},</span>
+
+                @guest
+                Read
+                @else
+                    @if (DB::table('sees')->where('post_id', $file->id)->where('user_id', Auth::user()->id)->exists())
+                    Unread
+                    @else
+                    Read
+                    @endif
+                @endguest
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+  ------------------------------------------VersiOne
+  <div class="container">
+    <div class="row">
+        @foreach ($data as $file)
+        <!-- <div class="col-lg-4 col-md-2 col-sm-2 mt-2"> -->
+        <div class="col-lg-4 mt-2">
+            <div class="card">
+                <div style="max-height:100px; overflow:hidden;" >
+                    <img src="{{ asset('storage/'. $file->image_four) }}" class="card-img-top" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ $file->name_four }}</h5>
+                    <h5 class="card-text">{{ $file->one_id }}</h5>
+                    <p class="card-text">{{ $file->status }}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+  </div>
+------------------------------------------VersiTwo
+<div class="row">
+  @foreach ($data as $file)
+  <div class="form">
+      <div class="card">
+          <a href="{{url('post/'.$file->id.'/see')}}" class="btn btn-outline-dark">
+            <h5 class="card-title">Two : {{ $file->two }}</h5>
+            <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+          </a>          
+      </div>
+  </div>
+  @endforeach
+</div>
+------------------------------------------VersiThree
+<div class="row mt-2">
+  @foreach ($data as $file)
+  <div class="form">
+      <div class="card">
+          <a href="{{url('post/'.$file->id.'/see')}}" class="nav-link" >
+              <div class="card-body">
+                  <h5 class="card-title">Two : {{ $file->two }}</h5>
+                  <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+              </div>
+          </a>
+      </div>
+  </div>
+  @endforeach
+</div>
+------------------------------------------VersiFour
+<div class="row">
+  @foreach ($data as $file)
+  <div class="col-lg-4 mt-2">
+      <div class="card">
+          <a href="{{url('post/'.$file->id.'/see')}}" class="nav-link" >
+              <div class="card-body">
+                  <h5 class="card-title">Two : {{ $file->two }}</h5>
+                  <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+              </div>
+          </a>
+  </div>
+  @endforeach
+</div>
+------------------------------------------VersiFive
+<div class="row">
+  @foreach ($data as $file)
+  <div class="col-lg-4 mt-2">
+      <div class="card">
+          <a href="{{url('post/'.$file->id.'/see')}}" class="btn btn-outline-dark" >
+              <div class="card-body">
+                  <h5 class="card-title">Post : {{ $file->post }}</h5>
+                  <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+              </div>
+          </a>
+
+          
+  </div>
+  @endforeach
+</div>
+------------------------------------------VersiSix
+<div class="row">
+  @foreach ($data as $file)
+  <div class="col-lg-4 mt-2">
+      <div class="card">
+          <div style="max-height:100px; overflow:hidden;" >
+              <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_960_720.jpg" class="card-img-top" alt="">
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Two : {{ $file->two }}</h5>
+              <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+              <a class="nav-link btn btn-outline-dark" href="{{url('post/'.$file->id.'/see')}}">see</a>
+          </div>
+      </div>
+  </div>
+  @endforeach
+</div>
+------------------------------------------VersiSeven
+<div class="row">
+  @foreach ($data as $file)
+  <div class="col-lg-4 mt-2">
+      <div class="card">
+      <a class="nav-link" href="{{url('post/'.$file->id.'/see')}}">
+          <div style="max-height:100px; overflow:hidden;" >
+              <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_960_720.jpg" class="card-img-top" alt="">
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Two : {{ $file->two }}</h5>
+              <h5 class="card-text">One : {{$file->one->name_one}}</h5>
+          </div>
+      </a>
+      </div>
+  </div>
+  @endforeach
+</div>
+</textarea>
+
+<p><label>Add Route Web, New</label></p>
+<textarea rows="2" cols="170" disabled>
+  Route::get('new/{id}/see', [HomeController::class,'new'])->name('new')->middleware('auth');
+</textarea>
+
+<p><label>Add HomeController New</label></p>
+<textarea rows="26" cols="170" disabled>
+  public function new($id)
+  {
+      $data = Post::findOrFail($id);
+      $one = One::all();
+      $user = User::all();
+      
+      $five = Five::select('*')->where('one_id', '=', $data->one_id)->where('status', 'yes')->get();
+
+      return view('new', compact('data','one','user','five'));
+  }
+  ------------------------------------------VersiZero
+        $data = Post::findOrFail($id);
+        $see = See::select('sees')->where('postingan_id', $data->id)->count();
+        $produk = Produk::select('*')->where('kategori_id', '=', $data->kategori_id)->where('status', 'tampil')->get();
+        
+        if (See::where('post_id', $id)->where('user_id', Auth::user()->id)->exists()) {
+            return view('halaman', compact('data','produk','see'));
+        }else {
+            See::create([
+                'post_id' => $id,
+                'user_id' => Auth::user()->id,
+            ]);
+            return view('halaman', compact('data','produk','see'));
+        }
+</textarea>
+
+<p><label>Add HomeController View New</label></p>
+<textarea rows="73" cols="170" disabled>
+<form action="{{url('post/'.$data->id)}}" method="POST">
+    @csrf
+    @method('PUT')
+<div class="mb-3">
+    <p>
+        Two : {{$data->name_two}}
+    </p>
+</div>
+<div class="mb-3">
+    {{$data->isi}}
+</div>
+<div class="mb-3">
+One : {{$data->one->name_one}}, Date : {{$data->Date}}, Maker : {{$data->user->name}} 
+</div>
+</form>
+
+<div class="container">
+  <div class="row">
+      @foreach ($five as $file)
+      <div class="col-lg-4 mt-2">
+          <div class="card">
+              <div style="max-height:100px; overflow:hidden;" >
+                  <img src="{{ asset('storage/'. $file->foto) }}" class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">{{ $file->name_five }}</h5>
+                  <h5 class="card-text">{{ $file->one_id }}</h5>
+                  <p class="card-text">{{ $file->name }}</p>
+              </div>
+          </div>
+      </div>
+      @endforeach
+  </div>
+</div>
+------------------------------------------VersiZero
+<div class="mb-3">
+  <p>
+      Post : {{$data->post}}
+  </p>
+</div>
+<div class="mb-3">
+  {{$data->list}}
+</div>
+<div class="mb-3">
+  One :
+  <button class="btn btn-outline-dark" disabled>{{$data->one->name_one}}</button>
+  Date :
+  <a class="btn btn-outline-dark" >{{$data->date}}</a>
+  Maker :
+  <a class="btn btn-outline-dark" >{{$data->user->name}}</a>
+  See :
+  <a class="btn btn-outline-dark" >{{$see}}</a>
+</div>
+
+<div class="row">
+  @foreach ($produc as $file)
+  <!-- <div class="col-lg-4 col-md-2 col-sm-2 mt-2"> -->
+  <div class="col-lg-4 mt-2">
+      <div class="card">
+          <div style="max-height:100px; overflow:hidden;" >
+              <img src="{{ asset('storage/'. $file->foto) }}" class="card-img-top" alt="">
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">{{ $file->nameProduc }}</h5>
+              <h5 class="card-text">$ {{ $file->price }}</h5>
+              <p class="card-text">{{ $file->descProduc }}</p>
+              <a class="nav-link btn btn-outline-dark" href="/">Buy</a>
+          </div>
+      </div>
+  </div>
+  @endforeach
+</div>
+</textarea>
+
+<p><label>Add Rooute Web, One</label></p>
+<textarea rows="2" cols="170" disabled>
+  Route::get('{id}', [HomeController::class, 'one']);
+</textarea>
+
+<p><label>Add HomeController One</label></p>
+<textarea rows="4" cols="170" disabled>
+  $data = Post::where('status', 'see')->where('one_id', $id)->get();
+  $one = One::all();
+  return view('home', compact('data', 'one'));
+</textarea>
+
+<p><label>Add HomeView, One</label></p>
+<textarea rows="14" cols="170" disabled>
+<div class="dropdown mb-3">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      One
+  </a>
+
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/">All One</a></li>
+      @foreach ($one as $file)
+          <li><a class="dropdown-item" href="/{{ $one->id }}">{{ $one->name_one }}</a></li>
+      @endforeach
+  </ul>
+</div>
+</textarea>
+
+<p><label>Add HomeView, One</label></p>
+<textarea rows="14" cols="170" disabled>
+<div class="dropdown mb-3">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      One
+  </a>
+
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/">All One</a></li>
+      @foreach ($one as $file)
+          <li><a class="dropdown-item" href="/{{ $one->id }}">{{ $one->name_one }}</a></li>
+      @endforeach
+  </ul>
+</div>
+</textarea>
+
+</form>
+
+<!-- <div style="min-height: 65vh;"></div> -->
+
+<nav class="navbar shadow-lg p-3 mt-4">
+    <div class="container">
+        <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
+
+        <form>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
+          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+        </form>
+    </div>
+</nav> 
+
+</body>
+</html>
