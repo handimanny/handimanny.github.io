@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// fetch('https://reqres.in/api/users/1')
+// fetch('http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json')
+fetch('http://win.lovestoblog.com/crud/members.json')
+  .then(response => {
+    if (response.ok) {
+      console.log('Website is online');
+    } else {
+      console.log('Website is offline');
+    }
+  })
+  .catch(error => {
+    console.log('Website is offline');
+  });
+
+    </script>
+</body>
+</html>
