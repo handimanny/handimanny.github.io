@@ -22,16 +22,24 @@ body {
   text-align: center;
   color: rgb(0, 119, 255);
 }
+
 .loader-frame {
   width: 70px;
   height: 70px;
   margin: auto;
   position: relative;
 }
+/* .loader1, .loader {
+  position: absolute;
+  border: 5px solid azure;
+  border-bottom: 5px solid azure;
+} */
+
 .loader1, .loader {
   position: absolute;
   border: 5px solid azure;
   border-bottom: 5px solid azure;
+  border-radius: 50%; /* Make element circular */
 }
 .loader1 {
   width: 70px;
@@ -45,6 +53,7 @@ body {
   height: 70px;
   border-top: 5px solid rgba(0, 206, 209, 0);
   border-bottom: 5px solid rgb(0, 89, 255);
+  border-radius: 50%; /* Make element circular */
   top: 5px; left: 5px;
   animation: anticlockwisespin 3s linear 3;
 }
