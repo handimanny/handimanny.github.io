@@ -32,6 +32,7 @@ body {
   position: absolute;
   border: 5px solid azure;
   border-bottom: 5px solid azure;
+  border-radius: 50%; /* Make element circular */
 }
 .loader1 {
   width: 70px;
@@ -45,6 +46,7 @@ body {
   height: 70px;
   border-top: 5px solid rgba(0, 206, 209, 0);
   border-bottom: 5px solid rgb(255, 0, 0);
+  border-radius: 50%; /* Make element circular */
   top: 5px; left: 5px;
   animation: anticlockwisespin 3s linear 3;
 }
