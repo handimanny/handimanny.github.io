@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css" />
+
+    <title>Sut Suit</title>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+          <li>
+            <a href="#" id="myBtn">Infone</a>
+        </li>
+        </ul>
+      </nav>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+        <h3>
+        Emoji yang tersedia di setiap platform atau perangkat bervariasi. Ada beberapa platform atau perangkat yang memiliki emoji jari kelingking, sementara yang lain mungkin tidak.
+        Emoji jari kelingking adalah salah satu emoji yang ditambahkan ke Unicode pada tahun 2018 sebagai bagian dari Emoji 11.0. Emoji ini mewakili tanda tangan untuk kata "kelingking" atau "ok" dalam beberapa bahasa. Namun, tidak semua platform atau perangkat mengimplementasikan emoji baru yang ditambahkan ke Unicode secara langsung. Biasanya, platform atau perangkat harus memperbarui aplikasi atau sistem operasi mereka agar dapat menampilkan emoji baru yang ditambahkan ke Unicode.
+        Jadi, jika Anda tidak dapat menemukan emoji jari kelingking di perangkat atau platform yang Anda gunakan, itu mungkin karena platform atau perangkat tersebut belum memperbarui aplikasi atau sistem operasi mereka untuk menampilkan emoji tersebut. Sebaliknya, jika Anda menemukan emoji jari kelingking di perangkat atau platform tertentu, itu mungkin karena platform atau perangkat tersebut telah memperbarui aplikasi atau sistem operasi mereka untuk menampilkan emoji tersebut.
+        </h3>
+    </p>
+  </div>
+</div>
+
+    <div id="app">
+        <div class="summary">
+            <h1 class="title">ASIL DOLANAN</h1>
+            <br />
+            <h1 id="inGame"></h1>
+            <br>
+            <h3 id="result"></h3>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="games">
+            <div class="option" onclick="playSound(); pickOption('🤙');">🤙</div>
+            <div class="option" onclick="playSound(); pickOption('☝️')">☝️</div>
+            <div class="option" onclick="playSound(); pickOption('👍')">👍</div>
+        </div>
+    </div>
+
+<audio id="myAudio">
+    <source src="sound/klik.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio2">
+    <source src="sound/ting.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+    <script>
+
+        function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+        function playSound2() {
+            var audio = document.getElementById("myAudio2");
+            audio.play();
+        }
+
+        class Start {
+            constructor() {
+                this.playerName = "Kowe"
+                this.botName = "Aku"
+                this.playerOption;
+                this.botOption;
+                this.winner = ""
+            }
+
+            get getBotOption() {
+                return this.botOption;
+            }
+
+            set setBotOption(option) {
+                this.botOption = option;
+            }
+
+            get getPlayerOption() {
+                return this.playerOption
+            }
+
+            set setPlayerOption(option) {
+                this.playerOption = option;
+            }
+
+            botBrain() {
+                const option = ["🤙", "☝️", "👍"];
+                const bot = option[Math.floor(Math.random() * option.length)];
+                return bot;
+            }
+
+            winCalculation() {
+                if (this.botOption == "🤙" && this.playerOption == "☝️") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "🤙" && this.playerOption == "👍") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "☝️" && this.playerOption == "🤙") {
+                    return this.winner = this.botName;
+                } else if (this.botOption == "☝️" && this.playerOption == "👍") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "👍" && this.playerOption == "🤙") {
+                    return this.winner = this.playerName
+                } else if (this.botOption == "👍" && this.playerOption == "☝️") {
+                    return this.winner = this.botName;
+                } else {
+                    return this.winner = "IMBANG"
+                }
+            }
+
+            matchResult() {
+                if (this.winner != "IMBANG") {
+                    playSound2();
+                    return `${this.winner} MENANG!`;
+                } else {
+                    playSound2();
+                    return `Cok ${this.winner}, Ra enek seng MENANG`;
+                }
+            }
+        }
+
+        function pickOption(params) {
+            const start = new Start();
+            start.setPlayerOption = params;
+            start.setBotOption = start.botBrain();
+            start.winCalculation();
+
+            const inGame = document.getElementById("inGame");
+            const result = document.getElementById("result");
+
+            inGame.textContent = "..."
+            result.textContent = "..."
+
+            setTimeout(() => {
+                inGame.textContent = `${start.getPlayerOption} LAWAN ${start.getBotOption}`
+                result.textContent = start.matchResult();
+            }, 1500);
+
+        }
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere
+    </script>
+</body>
+
+</html>
