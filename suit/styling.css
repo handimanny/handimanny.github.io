@@ -16,6 +16,7 @@
 
 .modal-content {
   position: relative;
+  /* bagian modal */
   background-color: rgb(80, 80, 80);
   margin: 15% auto;
   padding: 20px;
@@ -84,24 +85,24 @@ body,
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  border: 0.3rem solid rgb(0, 0, 0);
-  width: 25rem;
-  height: 25rem;
+  border: 3px solid rgb(0, 0, 0);
+  width: 400px;
+  height: 400px;
   text-align: center;
 }
 
 .games {
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
 }
 
 .option {
-  width: 100%;
-  margin: 0.5rem 0.5rem;
-  padding: 2rem;
+  width: 30%;
+  margin: 10px 15px;
+  padding: 25px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 40px;
   background-color: rgb(117, 117, 117);
 }
 
