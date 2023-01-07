@@ -7,4 +7,5 @@ https://handimanny.github.io/desa/
 https://handimanny.github.io/kuntul/
 https://handimanny.github.io/teman/
 https://handimanny.github.io/cara/
+https://handimanny.github.io/suit/
 ```
