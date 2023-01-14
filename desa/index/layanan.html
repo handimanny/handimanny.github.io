@@ -52,8 +52,11 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active {
+.activer {
   background-color: #00ff2a;
+}
+.active {
+  font-weight: bold;
 }
 
 /* Fading animation */
@@ -104,7 +107,7 @@ img {vertical-align: middle;}
   <nav class="navbar navbar-dark bg-success navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
     <ul class="navbar-nav nav-justified w-100" style="margin-bottom: 70px;">
       <li class="nav-item">
-        <a href="index.html" class="nav-link">
+        <a href="index.html" class="nav-link active">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
             <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
@@ -203,12 +206,23 @@ img {vertical-align: middle;}
       slideIndex++;
       if (slideIndex > slides.length) {slideIndex = 1}    
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" activer", "");
       }
       slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+      dots[slideIndex-1].className += " activer";
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
+
+    let links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+    link.addEventListener('click', function(event) {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+        // other actions here
+        window.location.href = this.href;
+    });
+});
     </script>
   
 </body>
