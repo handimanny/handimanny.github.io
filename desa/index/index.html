@@ -99,6 +99,73 @@ img {vertical-align: middle;}
   background-color: #006310;
 }
 
+/* ini destop */
+
+/* Hide the navigation menu on mobile */
+@media (max-width: 767px) {
+  #desktop-menu {
+    display: none;
+  }
+}
+
+/* Show the navigation menu on desktop */
+@media (min-width: 768px) {
+  #desktop-menu {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 196, 75);
+    color: #fff;
+    padding: 10px;
+  }
+
+  /* responsif-start */
+  @media (min-width: 769px) {
+  #desktop-menu {
+    padding: 10px 1rem;
+  }
+}
+  @media (min-width: 800px) {
+  #desktop-menu {
+    padding: 10px 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #desktop-menu {
+    padding: 10px 6rem;
+  }
+}
+
+@media (min-width: 1669px) {
+  #desktop-menu {
+    padding: 10px 16.2rem;
+  }
+}
+@media (min-width: 1700px) {
+  #desktop-menu {
+    padding: 10px 24rem;
+  }
+}
+/* responsif-end */
+
+  #desktop-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  #desktop-menu a:hover {
+    background-color: rgb(1, 170, 66);
+  }
+}
+
+/* bawah */
+.min {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: space-between;
+  }
   </style>
   <link rel="icon" href="https://i.pinimg.com/736x/2b/81/a8/2b81a830e7be62b2437a493d2867c3d8.jpg">
 
@@ -106,6 +173,15 @@ img {vertical-align: middle;}
 
 </head>
 <body>
+
+  <div class="min">
+    <div class="div">
+
+  <nav id="desktop-menu">
+    <a href="index.html" class="nav-link active">Depan</a>
+    <a href="hubungi.html" class="nav-link">Hubungi</a>
+    <a href="tentang.html" class="nav-link">Tentang</a>
+  </nav>
 
   <nav class="navbar navbar-dark bg-success navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom ">
     <ul class="navbar-nav nav-justified w-100" style="margin-bottom: 70px;">
@@ -134,7 +210,8 @@ img {vertical-align: middle;}
   </nav>
 
 
-  <article class="container py-5" style="margin-bottom: 200px;">
+  <!-- <article class="container py-5" style="margin-bottom: 200px;"> -->
+  <article class="container py-5">
     <h1 class="h1" style="color:rgb(0, 196, 75);">Kesongo</h1>
 
     <div class="slideshow-container">
@@ -204,6 +281,18 @@ img {vertical-align: middle;}
         </div>
     </p>
   </article>
+
+</div>
+<footer class="navbar shadow-lg p-3 mt-4">
+<div class="container">
+    <p></p>
+
+    <p>
+      © h4nd1 2023
+    </p>
+</div>
+</footer>
+</div>
 
   <script>
 
