@@ -16,7 +16,7 @@ body {
 .logo {
   width: 300px;
   height: 220px;
-  margin: 200px auto 200px auto;
+  margin: 150px auto 150px auto;
   font-size: 55px;
   text-shadow: -1px 2px 2px #000;
   text-align: center;
@@ -37,14 +37,14 @@ body {
 .loader1 {
   width: 70px;
   height: 70px;
-  border-top: 5px solid rgb(9, 255, 0);
-  border-bottom: 5px solid azure;
+  /* border-top: 5px solid rgb(9, 255, 0);
+  border-bottom: 5px solid rgb(255, 0, 0); */
   animation: clockwisespin 3s linear 3;
 }
 .loader2 {
   width: 70px;
   height: 70px;
-  border-top: 5px solid rgba(0, 206, 209, 0);
+  border-top: 5px solid rgb(9, 255, 0);
   border-bottom: 5px solid rgb(255, 0, 0);
   border-radius: 50%; /* Make element circular */
   top: 5px; left: 5px;
