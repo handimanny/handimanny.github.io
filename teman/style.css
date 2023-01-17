@@ -45,14 +45,14 @@ body {
   width: 70px;
   height: 70px;
   border-top: 5px solid rgb(9, 255, 0);
-  border-bottom: 5px solid azure;
+  border-bottom: 5px solid rgb(0, 89, 255);
   animation: clockwisespin 3s linear 3;
 }
 .loader2 {
   width: 70px;
   height: 70px;
-  border-top: 5px solid rgba(0, 206, 209, 0);
-  border-bottom: 5px solid rgb(0, 89, 255);
+  /* border-top: 5px solid rgba(0, 206, 209, 0);
+  border-bottom: 5px solid rgb(0, 89, 255); */
   border-radius: 50%; /* Make element circular */
   top: 5px; left: 5px;
   animation: anticlockwisespin 3s linear 3;
