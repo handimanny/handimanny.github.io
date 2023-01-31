@@ -8,4 +8,5 @@ https://handimanny.github.io/kuntul/
 https://handimanny.github.io/teman/
 https://handimanny.github.io/suit/
 https://handimanny.github.io/resume/
+[https://handimanny.github.io/resume/](https://handimanny.github.io/resume/){:target="_blank"}
 ```
