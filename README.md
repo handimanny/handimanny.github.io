@@ -9,14 +9,12 @@ https://handimanny.github.io/teman/
 https://handimanny.github.io/suit/
 https://handimanny.github.io/resume/
 ```
-* https://handimanny.github.io/resume/
+* [Desa](https://handimanny.github.io/desa/)
 
-* [Apa](https://handimanny.github.io/desa/)
+* [Kuntul](https://handimanny.github.io/kuntul/)
 
-* [https://handimanny.github.io/kuntul/](https://handimanny.github.io/kuntul/)
+* [Teman](https://handimanny.github.io/teman/)
 
-* [https://handimanny.github.io/teman/](https://handimanny.github.io/teman/)
+* [Suit](https://handimanny.github.io/suit/)
 
-* [https://handimanny.github.io/suit/](https://handimanny.github.io/suit/)
-
-* [https://handimanny.github.io/resume/](https://handimanny.github.io/resume/)
+* [Resume](https://handimanny.github.io/resume/)
