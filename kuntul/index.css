@@ -19,6 +19,7 @@ body {
 
 #screen canvas {
   margin: auto;
+  /* width: 100%; */
   /* Hide the gap for font descenders. */
   display: block;
 
