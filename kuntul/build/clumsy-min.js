@@ -89,7 +89,7 @@ var game = {
     },
     update: function (a) {
        var b = this;
-       if (this.pos.x = 60, !game.data.start) return this._super(me.Entity, "update", [a]);
+       if (this.pos.x = 600, !game.data.start) return this._super(me.Entity, "update", [a]);
        if (this.renderable.currentTransform.identity(), me.input.isKeyPressed("fly")) {
           me.audio.play("wing"), this.gravityForce = .2;
           var c = this.pos.y;
@@ -157,7 +157,7 @@ var game = {
  }), game.Ground = me.Entity.extend({
     init: function (a, b) {
        var c = {};
-       c.image = me.loader.getImage("ground"), c.width = 900, c.height = 96, this._super(me.Entity, "init", [a, b, c]), this.alwaysUpdate = !0, this.body.gravity = 0, this.body.vel.set(-4, 0), this.type = "ground"
+       c.image = me.loader.getImage("ground"), c.width = 1300, c.height = 96, this._super(me.Entity, "init", [a, b, c]), this.alwaysUpdate = !0, this.body.gravity = 0, this.body.vel.set(-4, 0), this.type = "ground"
     },
     update: function (a) {
        return this.pos.add(this.body.vel), this.pos.x < -this.renderable.width && (this.pos.x = me.video.renderer.getWidth() - 10), me.Rect.prototype.updateBounds.apply(this), this._super(me.Entity, "update", [a])
