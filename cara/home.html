@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winner</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winner</title>
 </head>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
-    textarea {
-      width: 100%;
-      height: 100%;
-    }
-    
-    </style>
-    
 <body style="user-select: none;">
 
   <nav class="navbar shadow p-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#"><span class="text-primary" >Win</span><span class="text-black-50" >ner</span></a>
+      <a class="navbar-brand fw-bold" href="#"><span class="text-primary">Win</span><span
+          class="text-black-50">ner</span></a>
 
-        <form>
-          <a href='index.html' class="btn btn-outline-success fw-bold">Dashboard</a>
-        </form>
-      </div>
+      <form>
+        <a href='index.html' class="btn btn-outline-success fw-bold">Dashboard</a>
+      </form>
+    </div>
     </div>
   </nav>
 
@@ -42,10 +45,10 @@
     <a href="six.html" class="btn btn-outline-primary">OOP PHP</a>
   </div> -->
 
-<form action="/action_page.php" class=" form-control container mt-2">
-  
-<p><label>Add HomeController</label></p>
-<textarea rows="7" cols="170" disabled>
+  <form action="/action_page.php" class=" form-control container mt-2">
+
+    <p><label>Add HomeController</label></p>
+    <textarea rows="7" cols="170" disabled>
   $data = Four::where('status', 'yes')->get();
   return view('home', compact('data'));
   ------------------------------------------VersiZero
@@ -54,8 +57,8 @@
   return view('home', compact('data','one'));
 </textarea>
 
-<p><label>Add HomeView</label></p>
-<textarea rows="143" cols="170" disabled>
+    <p><label>Add HomeView</label></p>
+    <textarea rows="143" cols="170" disabled>
   ------------------------------------------VersiZero
   <div class="row">
     @foreach ($data as $file)
@@ -200,13 +203,13 @@
 </div>
 </textarea>
 
-<p><label>Add Route Web, New</label></p>
-<textarea rows="2" cols="170" disabled>
+    <p><label>Add Route Web, New</label></p>
+    <textarea rows="2" cols="170" disabled>
   Route::get('new/{id}/see', [HomeController::class,'new'])->name('new')->middleware('auth');
 </textarea>
 
-<p><label>Add HomeController New</label></p>
-<textarea rows="26" cols="170" disabled>
+    <p><label>Add HomeController New</label></p>
+    <textarea rows="26" cols="170" disabled>
   public function new($id)
   {
       $data = Post::findOrFail($id);
@@ -233,8 +236,8 @@
         }
 </textarea>
 
-<p><label>Add HomeController View New</label></p>
-<textarea rows="73" cols="170" disabled>
+    <p><label>Add HomeController View New</label></p>
+    <textarea rows="73" cols="170" disabled>
 <form action="{{url('post/'.$data->id)}}" method="POST">
     @csrf
     @method('PUT')
@@ -309,20 +312,20 @@ One : {{$data->one->name_one}}, Date : {{$data->Date}}, Maker : {{$data->user->n
 </div>
 </textarea>
 
-<p><label>Add Rooute Web, One</label></p>
-<textarea rows="2" cols="170" disabled>
+    <p><label>Add Rooute Web, One</label></p>
+    <textarea rows="2" cols="170" disabled>
   Route::get('{id}', [HomeController::class, 'one']);
 </textarea>
 
-<p><label>Add HomeController One</label></p>
-<textarea rows="4" cols="170" disabled>
+    <p><label>Add HomeController One</label></p>
+    <textarea rows="4" cols="170" disabled>
   $data = Post::where('status', 'see')->where('one_id', $id)->get();
   $one = One::all();
   return view('home', compact('data', 'one'));
 </textarea>
 
-<p><label>Add HomeView, One</label></p>
-<textarea rows="14" cols="170" disabled>
+    <p><label>Add HomeView, One</label></p>
+    <textarea rows="14" cols="170" disabled>
 <div class="dropdown mb-3">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
       aria-expanded="false">
@@ -338,8 +341,8 @@ One : {{$data->one->name_one}}, Date : {{$data->Date}}, Maker : {{$data->user->n
 </div>
 </textarea>
 
-<p><label>Add HomeView, One</label></p>
-<textarea rows="14" cols="170" disabled>
+    <p><label>Add HomeView, One</label></p>
+    <textarea rows="14" cols="170" disabled>
 <div class="dropdown mb-3">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
       aria-expanded="false">
@@ -355,22 +358,23 @@ One : {{$data->one->name_one}}, Date : {{$data->Date}}, Maker : {{$data->user->n
 </div>
 </textarea>
 
-</form>
+  </form>
 
-<!-- <div style="min-height: 65vh;"></div> -->
+  <!-- <div style="min-height: 65vh;"></div> -->
 
-<nav class="navbar shadow-lg p-3 mt-4">
+  <nav class="navbar shadow-lg p-3 mt-4">
     <div class="container">
-        <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
+      <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
 
-        <form>
-          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
-          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
-          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
-          <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
-        </form>
+      <form>
+        <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-instagram"></i></a>
+        <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-facebook"></i></a>
+        <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-twitter"></i></a>
+        <a href='#' class="btn btn-outline-success fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+      </form>
     </div>
-</nav> 
+  </nav>
 
 </body>
+
 </html>

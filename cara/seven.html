@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winner</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winner</title>
 </head>
 
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/14/14187.png" type="image/x-icon"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/14/14187.png" type="image/x-icon" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-
   textarea {
     width: 100%;
     height: 100%;
   }
-  
-  </style>
-  
+</style>
+
 <body class="bg-success" style="user-select: none;">
 
   <nav class="navbar shadow p-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#"><span class="text-black" >Da</span><span class="text-light" >dark</span></a>
+      <a class="navbar-brand fw-bold" href="#"><span class="text-black">Da</span><span
+          class="text-light">dark</span></a>
 
-        <form>
-          <a href='index.html' class="btn btn-outline-light fw-bold">Dashboard</a>
-        </form>
-      </div>
+      <form>
+        <a href='index.html' class="btn btn-outline-light fw-bold">Dashboard</a>
+      </form>
+    </div>
     </div>
   </nav>
 
@@ -44,20 +47,20 @@
     <a href="seven.html" class="btn btn-outline-primary">OOP JS</a>
   </div> -->
 
-<form action="/action_page.php" class=" form-control container mt-2 bg-success">
+  <form action="/action_page.php" class=" form-control container mt-2 bg-success">
 
-  <p><label>Web Route  <a href="six.html" class="text-black" >next</a></label></p>
-  <textarea rows="3" cols="170" disabled>
+    <p><label>Web Route <a href="six.html" class="text-black">next</a></label></p>
+    <textarea rows="3" cols="170" disabled>
     Route::resource('rekomen', RekomenController::class);
   </textarea>
-  
-  <p><label>Make Controller</label></p>
-  <textarea rows="3" cols="170" disabled>
+
+    <p><label>Make Controller</label></p>
+    <textarea rows="3" cols="170" disabled>
     php artisan make:controller HitungController -r
   </textarea>
-  
-  <p><label>public function store(Request $request)</label></p>
-  <textarea rows="15" cols="170" disabled>
+
+    <p><label>public function store(Request $request)</label></p>
+    <textarea rows="15" cols="170" disabled>
         $keluhan = $request->keluhan; //ini sama
     
         $rekom = new Penggunaan($keluhan, $request->tahun);
@@ -72,9 +75,9 @@
     
         return view('rekomen', compact('data'));
   </textarea>
-  
-  <p><label>class Jamu</label></p>
-  <textarea rows="43" cols="170" disabled>
+
+    <p><label>class Jamu</label></p>
+    <textarea rows="43" cols="170" disabled>
     class Jamu
 {
     public function __construct($keluhan, $tahun)
@@ -119,8 +122,8 @@
 }
   </textarea>
 
-  <p><label>class Penggunaan extends Jamu</label></p>
-  <textarea rows="20" cols="170" disabled>
+    <p><label>class Penggunaan extends Jamu</label></p>
+    <textarea rows="20" cols="170" disabled>
     class Penggunaan extends Jamu
 {
     public function saran(){// method saran
@@ -142,11 +145,11 @@
 }
   </textarea>
 
-</form>
+  </form>
 
-<!-- <div style="min-height: 65vh;"></div> -->
+  <!-- <div style="min-height: 65vh;"></div> -->
 
-<!-- <nav class="navbar shadow-lg p-3 mt-4">
+  <!-- <nav class="navbar shadow-lg p-3 mt-4">
     <div class="container">
         <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a>
 
@@ -159,19 +162,20 @@
     </div>
 </nav> -->
 
-<footer class="navbar shadow-lg p-3 mt-4">
-<div class="container">
-    <!-- <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a> -->
-    <p></p>
+  <footer class="navbar shadow-lg p-3 mt-4">
+    <div class="container">
+      <!-- <a href='#top' class="btn fw-bold text-black-50 btn-outline-info">Keatas</a> -->
+      <p></p>
 
-    <form>
-      <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-instagram"></i></a>
-      <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-facebook"></i></a>
-      <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-twitter"></i></a>
-      <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-linkedin"></i></a>
-    </form>
-</div>
-</footer>
+      <form>
+        <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-instagram"></i></a>
+        <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-facebook"></i></a>
+        <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-twitter"></i></a>
+        <a href='#' class="btn btn-outline-light fw-bold"><i class="fa-brands fa-linkedin"></i></a>
+      </form>
+    </div>
+  </footer>
 
 </body>
+
 </html>
