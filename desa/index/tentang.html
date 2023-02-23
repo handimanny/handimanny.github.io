@@ -1,301 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>h4nd1</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{display:none;}
+  <style>
+    img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+      display: none;
+    }
 
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+    * {
+      box-sizing: border-box;
+    }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+    body {
+      font-family: Verdana, sans-serif;
+    }
 
-/* Caption text */
-.text {
-  color: #ffffff;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+    .mySlides {
+      display: none;
+    }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #00ff2a;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+    img {
+      vertical-align: middle;
+    }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
 
-.activer {
-  background-color: #00ff2a;
-}
-.active {
-  font-weight: bold;
-}
+    /* Caption text */
+    .text {
+      color: #ffffff;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #00ff2a;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+    .activer {
+      background-color: #00ff2a;
+    }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+    .active {
+      font-weight: bold;
+    }
 
-/* ini destop */
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
 
-/* Hide the navigation menu on mobile */
-@media (max-width: 767px) {
-  #desktop-menu {
-    display: none;
-  }
-}
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
 
-/* Show the navigation menu on desktop */
-@media (min-width: 768px) {
-  #desktop-menu {
-    display: flex;
-    align-items: center;
-    background-color: rgb(0, 196, 75);
-    color: #fff;
-    padding: 10px;
-  }
+      to {
+        opacity: 1
+      }
+    }
 
-  /* responsif-start */
-  @media (min-width: 769px) {
-  #desktop-menu {
-    padding: 10px 1rem;
-  }
-}
-  @media (min-width: 800px) {
-  #desktop-menu {
-    padding: 10px 2rem;
-  }
-}
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
 
-@media (min-width: 992px) {
-  #desktop-menu {
-    padding: 10px 6rem;
-  }
-}
+      to {
+        opacity: 1
+      }
+    }
 
-@media (min-width: 1669px) {
-  #desktop-menu {
-    padding: 10px 16.2rem;
-  }
-}
-@media (min-width: 1700px) {
-  #desktop-menu {
-    padding: 10px 24rem;
-  }
-}
-/* responsif-end */
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
 
-  #desktop-menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
+    /* ini destop */
 
-  #desktop-menu a:hover {
-    background-color: rgb(1, 170, 66);
-  }
-}
+    /* Hide the navigation menu on mobile */
+    @media (max-width: 767px) {
+      #desktop-menu {
+        display: none;
+      }
+    }
 
-/* bawah */
-.min {
+    /* Show the navigation menu on desktop */
+    @media (min-width: 768px) {
+      #desktop-menu {
+        display: flex;
+        align-items: center;
+        background-color: rgb(0, 196, 75);
+        color: #fff;
+        padding: 10px;
+      }
+
+      /* responsif-start */
+      @media (min-width: 769px) {
+        #desktop-menu {
+          padding: 10px 1rem;
+        }
+      }
+
+      @media (min-width: 800px) {
+        #desktop-menu {
+          padding: 10px 2rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        #desktop-menu {
+          padding: 10px 6rem;
+        }
+      }
+
+      @media (min-width: 1669px) {
+        #desktop-menu {
+          padding: 10px 16.2rem;
+        }
+      }
+
+      @media (min-width: 1700px) {
+        #desktop-menu {
+          padding: 10px 24rem;
+        }
+      }
+
+      /* responsif-end */
+
+      #desktop-menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      #desktop-menu a:hover {
+        background-color: rgb(1, 170, 66);
+      }
+    }
+
+    /* bawah */
+    .min {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
       justify-content: space-between;
-  }
+    }
   </style>
   <!-- <link rel="icon" href="https://i.pinimg.com/736x/2b/81/a8/2b81a830e7be62b2437a493d2867c3d8.jpg"> -->
   <link rel="icon" href="https://handimanny.github.io/desa/Ke9.png">
 
 </head>
+
 <body style="user-select: none;">
 
   <div class="min">
     <div class="div">
 
-  <nav id="desktop-menu">
-    <a href="index.html">Depan</a>
-    <a href="hubungi.html">Hubungi</a>
-    <a href="tentang.html" class="active">Tentang</a>
-  </nav>
+      <nav id="desktop-menu">
+        <a href="index.html">Depan</a>
+        <a href="hubungi.html">Hubungi</a>
+        <a href="tentang.html" class="active">Tentang</a>
+      </nav>
 
-  <nav class="navbar navbar-dark bg-success navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
-    <ul class="navbar-nav nav-justified w-100" style="margin-bottom: 70px;">
-      <li class="nav-item">
-        <a href="index.html" class="nav-link">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-          </svg><br>Depan
-          </a>
-      </li>
-      <li class="nav-item">
-        <a href="hubungi.html" class="nav-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-        </svg><br>Hubungi</a>
-      </li>
-      <li class="nav-item">
-        <a href="tentang.html" class="nav-link active">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
-          <path d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z"/>
-        </svg><br>Tentang</a>
-      </li>
-    </ul>
-  </nav>
+      <nav class="navbar navbar-dark bg-success navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
+        <ul class="navbar-nav nav-justified w-100" style="margin-bottom: 70px;">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                <path fill-rule="evenodd"
+                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+              </svg><br>Depan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="hubungi.html" class="nav-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg><br>Hubungi</a>
+          </li>
+          <li class="nav-item">
+            <a href="tentang.html" class="nav-link active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z" />
+              </svg><br>Tentang</a>
+          </li>
+        </ul>
+      </nav>
 
 
-  <article class="container py-5" style="margin-bottom: 200px;">
-    <h1 class="h1" style="color:rgb(0, 196, 75);">Kesongo</h1>
+      <article class="container py-5" style="margin-bottom: 200px;">
+        <h1 class="h1" style="color:rgb(0, 196, 75);">Kesongo</h1>
 
-    <div class="slideshow-container">
+        <div class="slideshow-container">
 
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="gapuro.jpg" style="width:100%">
-        <div class="text">Perbatasan Desa</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="gapuro2.jpg" style="width:100%">
-        <div class="text">Matahari Terbit</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="gapuro3.jpg" style="width:100%">
-        <div class="text">Padi Disawah</div>
-      </div>
-      
-      </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="gapuro.jpg" style="width:100%">
+            <div class="text">Perbatasan Desa</div>
+          </div>
 
-    <p>
-      <div class="container">
-        <center>
-        <hr>
-        <a href="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="green" class="bi bi-globe2" viewBox="0 0 20 20">
-            <path d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z"/>
-          </svg>
-        </a>
-        <br>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="gapuro2.jpg" style="width:100%">
+            <div class="text">Matahari Terbit</div>
+          </div>
 
-        Aplikasi ini dikembangkan agar
-        <br>
-        warga desa Kesongo lebih mudah
-        <br>
-        untuk mengakses layanan desa.
-        <br>
-        Yang sebelumnya kurang terbuka
-        <br>
-        disini dapat di akses dengan mudah.
-        <br>
-        <br>
-        Versi Aplikasi 1.1
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="gapuro3.jpg" style="width:100%">
+            <div class="text">Padi Disawah</div>
+          </div>
 
-        <hr>
-        </center>
         </div>
-    </p>
-  </article>
+        <br>
 
-</div>
-<footer class="navbar shadow-lg p-3 mt-4 text-white" style="background-color: rgb(0, 196, 75)">
-<div class="container">
-    <p></p>
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
 
-    <p>
-      © h4nd1 2023
-    </p>
-</div>
-</footer>
-</div>
+        <p>
+          <div class="container">
+            <center>
+              <hr>
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="green" class="bi bi-globe2"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z" />
+                </svg>
+              </a>
+              <br>
+
+              Aplikasi ini dikembangkan agar
+              <br>
+              warga desa Kesongo lebih mudah
+              <br>
+              untuk mengakses layanan desa.
+              <br>
+              Yang sebelumnya kurang terbuka
+              <br>
+              disini dapat di akses dengan mudah.
+              <br>
+              <br>
+              Versi Aplikasi 1.1
+
+              <hr>
+            </center>
+          </div>
+        </p>
+      </article>
+
+    </div>
+    <footer class="navbar shadow-lg p-3 mt-4 text-white" style="background-color: rgb(0, 196, 75)">
+      <div class="container">
+        <p></p>
+
+        <p>
+          © h4nd1 2023
+        </p>
+      </div>
+    </footer>
+  </div>
 
   <script>
     var slideIndex = 0;
     showSlides();
-    
+
     function showSlides() {
       var i;
       var slides = document.getElementsByClassName("mySlides");
       var dots = document.getElementsByClassName("dot");
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" activer", "");
       }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " activer";
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " activer";
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
 
     let links = document.querySelectorAll('nav a');
 
-links.forEach(link => {
-    link.addEventListener('click', function(event) {
+    links.forEach(link => {
+      link.addEventListener('click', function (event) {
         links.forEach(l => l.classList.remove("active"));
         this.classList.add("active");
         // other actions here
         window.location.href = this.href;
+      });
     });
-});
-    </script>
-  
+  </script>
+
 </body>
+
 </html>
