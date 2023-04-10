@@ -1,0 +1,12 @@
+{
+  "name": "Suhat Bridge",
+  "short_name": "Suhat Bridge",
+  "id": "com.example.gamename",
+  "description": "Suhat Bridge ( Demo Game )",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
